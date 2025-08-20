@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hue.mate — Browser Color Picker</title>
+  <meta name="description" content="Hue.mate is a browser color picker that lets you grab colors from any page, save palettes, and copy color codes in one click." />
+  <link rel="preload" href="assets/hero-placeholder.png" as="image">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Left sidebar / margin nav -->
+  <aside class="side-nav" aria-label="Sidebar">
+    <div class="side-nav__inner">
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#" aria-current="page">Homepage (YogGForge)</a></li>
+          <li><a href="#" title="Visit our sister app">Sister App: Task.mate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content">
+    <!-- App name -->
+    <header class="header">
+      <h1 class="app-name">Hue.mate</h1>
+      <p class="tagline">Pick colors from anywhere in your browser. Save, organize, and copy in a click.</p>
+    </header>
+
+    <!-- Top image / hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="assets/hero-placeholder.png" alt="Hue.mate extension preview" class="hero__image" />
+    </section>
+
+    <!-- Description -->
+    <section class="description" aria-labelledby="desc-title">
+      <h2 id="desc-title">What is Hue.mate?</h2>
+      <p>
+        <strong>Hue.mate</strong> is a Google Chrome extension that lets you pick any color you see in your browser and instantly get its code.
+        Build your own color palettes, copy codes with one click, and stay in the flow while you design or develop.
+      </p>
+    </section>
+
+    <!-- Features table -->
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Features</h2>
+      <div class="table-wrap" role="region" aria-label="Feature list" tabindex="0">
+        <table class="feature-table">
+          <thead>
+            <tr>
+              <th scope="col">Feature</th>
+              <th scope="col">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Pick colors in-browser</td>
+              <td>Grab colors from anywhere in the browser and get the exact color code.</td>
+            </tr>
+            <tr>
+              <td>Copy in one click</td>
+              <td>Click a saved color to copy its code to your clipboard instantly.</td>
+            </tr>
+            <tr>
+              <td>Save to palette</td>
+              <td>Store picked colors in the built-in palette for quick access.</td>
+            </tr>
+            <tr>
+              <td>Multiple palettes</td>
+              <td>Create up to <strong>3</strong> separate color palettes for different projects.</td>
+            </tr>
+            <tr>
+              <td>Clear palette</td>
+              <td>Reset a palette whenever you want to start fresh.</td>
+            </tr>
+            <tr>
+              <td>Undo clear</td>
+              <td>Accidentally cleared? No worries—undo the clear and restore your palette.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Sister app: <a href="#" title="Open Task.mate">Task.mate</a> ·
+        Home: <a href="#" title="Go to YogGForge">YogGForge</a>
+      </p>
+      <p class="smallprint">© <span id="year"></span> Hue.mate. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Tiny enhancement: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
