@@ -154,16 +154,52 @@ body{
   .content{ margin-left: 0; padding-top: 20px; }
 }
 
-
-
-/* Attention-grabbing animation */
-.attention-link {
+/* effect */
+.neon-border {
   position: relative;
-  color: #0073e6;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 6px 12px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #111; /* dark base for contrast */
+  overflow: hidden;
 }
 
-.attention-link:hover {
-  color: #ff6600;
+/* Moving neon border */
+.neon-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, 
+    #ff00ff, #00ffff, #ff00ff, #ffff00, #ff0000, #00ff00, #0000ff, #ff00ff);
+  background-size: 400% 400%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: neonFlow 6s linear infinite;
 }
+
+/* Blur for glow effect */
+.neon-border::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: inherit;
+  border-radius: inherit;
+  filter: blur(10px);
+  z-index: -2;
+  animation: neonFlow 6s linear infinite;
+}
+
+@keyframes neonFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
