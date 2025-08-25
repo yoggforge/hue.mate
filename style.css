@@ -153,3 +153,39 @@ body{
   }
   .content{ margin-left: 0; padding-top: 20px; }
 }
+
+
+
+/* Attention-grabbing animation */
+.attention-link {
+  position: relative;
+  color: #0073e6;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.attention-link:hover {
+  color: #ff6600;
+}
+
+/* Pulsing glow effect */
+.attention-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140%;
+  height: 2.2em;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background: rgba(255, 102, 0, 0.2);
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
