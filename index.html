@@ -26,18 +26,18 @@
           <li><a href="https://yoggforge.github.io/yoggforge/" aria-current="page" target="_blank" >YogGForge</a></li>
           <li>
             <a href="https://chromewebstore.google.com/detail/taskmate-to-do-list-tool/fkbbndiioogeaifjpdpfebbdoobpppep" 
-               target="_blank" 
-               title="Visit our sister app"
-               class="neon-border"> 
-               Sister App: Task.mate
-            </a>
-          </li>
+             target="_blank" 
+             title="Visit our sister app"
+             class="neon-border sister-btn" 
+             id="sisterAppText">
+             Sister App: Task.mate
+          </a>
+        </li>
 <!--for effect class neon border -->
         </ul>
       </nav>
     </div>
   </aside>
-
   <!-- Main content -->
   <main class="content">
     <!-- App name -->
@@ -141,5 +141,29 @@
     // Tiny enhancement: current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <script>
+    // Typewriter animation for sidebar Sister App link
+    const textEl = document.getElementById("sisterAppText");
+    const fullText = "Sister App: Task.mate";
+    let index = 0;
+  
+    function typeWriter() {
+      if (index <= fullText.length) {
+        textEl.textContent = fullText.substring(0, index);
+        index++;
+        setTimeout(typeWriter, 100); // typing speed
+      } else {
+        // restart after short delay
+        setTimeout(() => {
+          index = 0;
+          typeWriter();
+        }, 3000);
+      }
+    }
+  
+    typeWriter();
+  </script>
+
 </body>
 </html>
