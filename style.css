@@ -203,3 +203,21 @@ body{
   100% { background-position: 0% 50%; }
 }
 
+.install-btn {
+  display: flex;
+  align-items: center;
+  background: #4285f4; /* Google Chrome blue */
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.install-btn:hover {
+  background: #3367d6;
+}
+
+
