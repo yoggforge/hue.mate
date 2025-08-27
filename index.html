@@ -41,10 +41,22 @@
   <!-- Main content -->
   <main class="content">
     <!-- App name -->
-    <header class="header">
-    <img src="assets/logoheader.png" alt="Hue.mate Logo" style="max-width: 200px; margin-bottom: 0.5rem;">
-    <p class="tagline">Pick colors from anywhere in your browser. Save, organize, and copy in a click.</p>
-  </header>
+    <header class="header" style="display:flex; align-items:center; justify-content:space-between;">
+      <div class="header-left">
+        <img src="assets/logoheader.png" alt="Hue.mate Logo" style="max-width: 200px; margin-bottom: 0.5rem;">
+        <p class="tagline">Pick colors from anywhere in your browser. Save, organize, and copy in a click.</p>
+      </div>
+    
+      <!-- Install button -->
+      <a href="https://chromewebstore.google.com/detail/huemate-color-picker-tool/moleclbjmgchhloknmdbooobjoddkkfi" 
+         target="_blank" 
+         class="install-btn" 
+         title="Install Hue.mate from Chrome Web Store">
+        <img src="assets/chromeicon.png" alt="Chrome icon" style="width:24px; height:24px; margin-right:8px;">
+        <span>Install</span>
+      </a>
+    </header>
+
 
     <!-- Description -->
     <section class="description" aria-labelledby="desc-title">
